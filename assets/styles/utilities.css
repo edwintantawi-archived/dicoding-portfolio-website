@@ -30,6 +30,10 @@
     align-items: stretch;
 }
 
+.justify-content-center{
+    justify-content: center;
+}
+
 .gap-y-4{
     row-gap: var(--sz-4);
 }
@@ -46,6 +50,10 @@
 /* START:colors */
 .text-primary {
     color: var(--primary);
+}
+
+.bg-primary{
+    background-color: var(--primary);
 }
 /* END:colors */
 
