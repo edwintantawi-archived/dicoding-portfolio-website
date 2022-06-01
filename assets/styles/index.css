@@ -24,8 +24,6 @@
     z-index: -1;
 
     border-radius: 6px;
-
-    transition: 250ms ease-in-out;
 }
 
 .button--primary {
@@ -38,7 +36,7 @@
 }
 
 .button:hover::before{
-    inset: 0;
+    filter: brightness(80%);
 }
 
 @media screen and (min-width: 640px){
@@ -51,9 +49,21 @@
 }
 /* END:button */
 
+/* START:header */
+.header {
+    display: inline;
+}
+/* END:header */
+
 /* START:navbar */
 .navbar {
-    padding-block: .75rem;
+    padding-block: var(--sz-3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(40px);
 }
 
 .navbar__brand {
@@ -61,8 +71,12 @@
 }
 
 .navbar__nav {
-    display: flex;
-    column-gap: 1.5rem
+    display: none;
+    column-gap: 1.5rem;
+}
+
+.navbar__divider {
+    display: none;
 }
 
 .navbar__item {
@@ -81,6 +95,89 @@
 .navbar__link--active {
     color: var(--primary);
     font-weight: var(--fw-bold);
+}
+
+.navbar__actions {
+    margin-left: auto;
+}
+
+.navbar__toggler {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 6px;
+    height: 100%;
+
+    background-color: transparent;
+    border: none;
+}
+
+.navbar__toggler > span {
+    display: block;
+    height: 3px;
+    width: 32px;
+
+    background-color: var(--primary);
+
+    transform-origin: left;
+    transform: skew(45deg);
+    transition: 250ms ease-in-out;
+}
+
+.navbar__toggler--open > span:nth-child(1){
+    transform: rotate(45deg) translate(1px, -5px) skew(45deg);
+}
+
+.navbar__toggler--open > span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__toggler--open > span:nth-child(3){
+    transform: rotate(-45deg) translate(1px, 5px) skew(45deg);
+}
+
+@media screen and (min-width: 520px) {
+    .navbar__nav {
+        display: flex;
+    }
+
+    .navbar__divider {
+        display: block;
+    }
+    .navbar__toggler{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px ){
+    .navbar__nav--open {
+        position: fixed;
+        height: calc(100vh - 60px);
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 9;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+
+        background-color: var(--white);
+        padding: 1rem;
+    }
+
+    .navbar__nav--open .navbar__link {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--soft-gray);
+        text-align: center;
+    }
+
+    .navbar__nav--open .navbar__item{
+        justify-content: center;
+    }
 }
 /* END:navbar */
 

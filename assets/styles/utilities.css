@@ -38,8 +38,8 @@
 /* START:other */
 .v-divider {
     border: none;
-    border-left: 1px solid var(--white-gray);
-    margin-inline: 1.4rem;
+    border-left: 1px solid var(--soft-gray);
+    margin-inline: 1rem;
 }
 /* END:other */
 

@@ -10,6 +10,10 @@
     color: var(--gray);
 }
 
+body{
+    height: 99999px;
+}
+
 ul, ol {
     padding: 0;
 }
