@@ -1,8 +1,8 @@
 /* START:container */
 .container {
     max-width: 768px;
-    margin-inline: auto;
-    padding-inline: .75rem;
+    margin: 0 auto;
+    padding: 0 var(--sz-3);
 }
 /* END:container */
 
@@ -39,14 +39,6 @@
 }
 /* END:layouting */
 
-/* START:other */
-.v-divider {
-    border: none;
-    border-left: 1px solid var(--soft-gray);
-    margin-inline: 1rem;
-}
-/* END:other */
-
 /* START:colors */
 .text-primary {
     color: var(--primary);
@@ -62,5 +54,18 @@
     margin-top: var(--sz-2);
 }
 /* END:SPACING */
+
+
+/* START:other */
+.v-divider {
+    border: none;
+    border-left: 1px solid var(--soft-gray);
+    margin: 0 var(--sz-4);
+}
+
+.card {
+    border: 1px solid var(--soft-gray);
+}
+/* END:other */
 
 

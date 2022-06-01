@@ -20,7 +20,7 @@
         <!-- START:navbar -->
         <nav class="navbar">
             <div class="container flex-row items-stretch">
-                <img src="assets/images/brand-logo.svg" alt="Edwin Tantawi" class="navbar__brand">
+                <img src="assets/images/brand-logo.svg" alt="" class="navbar__brand">
                 <hr class="navbar__divider v-divider"/>
                 <ul id="navbar-nav" class="navbar__nav">
                     <li class="navbar__item">
@@ -67,24 +67,24 @@
         <!-- START:aside -->
         <aside>
             <div class="container">
-                <div class="about">
-                    <img src="assets/images/profile-picture.png" alt="Edwin Tantawi" class="about__picture">
+                <div class="about card">
+                    <img src="assets/images/profile-picture.png" alt="Profile picture" class="about__picture">
                     <ul class="bio">
-                        <li class="bio__item">
+                        <li class="card bio__item">
                             <img src="assets/images/profile.svg" alt="" class="icon">
                             <div>
                                 <h2>Full Name</h2>
                                 <p class="text-primary">Edwin Tantawi</p>
                             </div>
                         </li>
-                        <li class="bio__item">
+                        <li class="card bio__item">
                             <img src="assets/images/map.svg" alt="" class="icon">
                             <div>
                                 <h2>Location</h2>
                                 <p class="text-primary">Medan, Indonesia</p>
                             </div>
                         </li>
-                        <li class="bio__item">
+                        <li class="card bio__item">
                             <img src="assets/images/star.svg" alt="" class="icon">
                             <div>
                                 <h2>Hobby</h2>
@@ -98,14 +98,118 @@
         <!-- END:aside -->
 
         <!-- START:section - projects -->
-            <!-- articles -->
+        <section class="section">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Some <span class="text-primary">things I’ve Build</span></h2>
+                    <p class="section__subtitle">Some of the results of project work that have been built</p>
+                </header>
+
+                <!-- START:articles -->
+                <article class="card project">
+                    <img src="assets/images/brand-logo.svg" alt="" class="project__image">
+                    <header>
+                        <h3 class="project__heading">Todonesia <span class="project__category">(TodoList web app)</span></h3>
+                        <ul class="tags">
+                            <li class="tags__item">React JS</li>
+                            <li class="tags__item">Styles components</li>
+                        </ul>
+                    </header>
+                </article>
+                <!-- END:articles -->
+                <!-- START:articles -->
+                <article class="card project">
+                    <img src="assets/images/brand-logo.svg" alt="" class="project__image">
+                    <header>
+                        <h3 class="project__heading">Todonesia Todonesia todo app ku todo <span class="project__category">(TodoList web app)</span></h3>
+                        <ul class="tags">
+                            <li class="tags__item">React JS</li>
+                            <li class="tags__item">Styles components</li>
+                        </ul>
+                    </header>
+                </article>
+                <!-- END:articles -->
+                <!-- START:articles -->
+                <article class="card project">
+                    <img src="assets/images/brand-logo.svg" alt="" class="project__image">
+                    <header>
+                        <h3 class="project__heading">Todonesia <span class="project__category">(TodoList web app)</span></h3>
+                        <ul class="tags">
+                            <li class="tags__item">React JS</li>
+                            <li class="tags__item">Styles components</li>
+                        </ul>
+                    </header>
+                </article>
+                <!-- END:articles -->
+            </div>
+        </section>
         <!-- END:section - projects -->
 
         <!-- START:section - blogs -->
-            <!-- articles -->
+        <section class="section">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">My <span class="text-primary">Blog post’s</span></h2>
+                    <p class="section__subtitle">Share and learn knowledge through writing on the blog</p>
+                </header>
+
+                <!-- START:articles -->
+                <a href="#">
+                    <article class="blog">
+                        <header>
+                            <h3 class="blog__heading">Rust Is The Future of JavaScript Infrastructure.</h3>
+                            <ul class="tags">
+                                <li class="tags__item">Rust</li>
+                                <li class="tags__item">Ifrastructure</li>
+                            </ul>
+                        </header>
+
+                        <p class="blog__summary mt-2">
+                            <time datetime="2022-05-16" class="blog__date">16 May 2022</time> • RA deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their ...
+                        </p>
+                    </article>
+                </a>
+                <!-- END:articles -->
+                <!-- START:articles -->
+                <a href="#">
+                    <article class="blog">
+                        <header>
+                            <h3 class="blog__heading">Rust Is The Future of JavaScript Infrastructure.</h3>
+                            <ul class="tags">
+                                <li class="tags__item">Rust</li>
+                                <li class="tags__item">Ifrastructure</li>
+                            </ul>
+                        </header>
+
+                        <p class="blog__summary mt-2">
+                            <time datetime="2022-05-16" class="blog__date">16 May 2022</time> • RA deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their ...
+                        </p>
+                    </article>
+                </a>
+                <!-- END:articles -->
+                <!-- START:articles -->
+                <a href="#">
+                    <article class="blog">
+                        <header>
+                            <h3 class="blog__heading">Rust Is The Future of JavaScript Infrastructure.</h3>
+                            <ul class="tags">
+                                <li class="tags__item">Rust</li>
+                                <li class="tags__item">Ifrastructure</li>
+                            </ul>
+                        </header>
+
+                        <p class="blog__summary mt-2">
+                            <time datetime="2022-05-16" class="blog__date">16 May 2022</time> • RA deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their ...
+                        </p>
+                    </article>
+                </a>
+                <!-- END:articles -->
+            </div>
+        </section>
         <!-- END:section - blogs -->
 
         <!-- START:section - get in touch -->
+        <section></section>
         <!-- END:section - get in touch -->
     </main>
     <!-- END:main -->
