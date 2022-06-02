@@ -105,42 +105,7 @@
                     <p class="section__subtitle">Some of the results of project work that have been built</p>
                 </header>
 
-                <!-- START:articles -->
-                <article class="card project">
-                    <img src="assets/images/brand-logo.svg" alt="" class="project__image">
-                    <header>
-                        <h3 class="project__heading">Todonesia <span class="project__category">(TodoList web app)</span></h3>
-                        <ul class="tags">
-                            <li class="tags__item">React JS</li>
-                            <li class="tags__item">Styles components</li>
-                        </ul>
-                    </header>
-                </article>
-                <!-- END:articles -->
-                <!-- START:articles -->
-                <article class="card project">
-                    <img src="assets/images/brand-logo.svg" alt="" class="project__image">
-                    <header>
-                        <h3 class="project__heading">Todonesia Todonesia todo app ku todo <span class="project__category">(TodoList web app)</span></h3>
-                        <ul class="tags">
-                            <li class="tags__item">React JS</li>
-                            <li class="tags__item">Styles components</li>
-                        </ul>
-                    </header>
-                </article>
-                <!-- END:articles -->
-                <!-- START:articles -->
-                <article class="card project">
-                    <img src="assets/images/brand-logo.svg" alt="" class="project__image">
-                    <header>
-                        <h3 class="project__heading">Todonesia <span class="project__category">(TodoList web app)</span></h3>
-                        <ul class="tags">
-                            <li class="tags__item">React JS</li>
-                            <li class="tags__item">Styles components</li>
-                        </ul>
-                    </header>
-                </article>
-                <!-- END:articles -->
+                <div id="project-contents"></div>
             </div>
         </section>
         <!-- END:section - projects -->
@@ -152,72 +117,40 @@
                     <h2 class="section__title">My <span class="text-primary">Blog post’s</span></h2>
                     <p class="section__subtitle">Share and learn knowledge through writing on the blog</p>
                 </header>
-
-                <!-- START:articles -->
-                <a href="#">
-                    <article class="blog">
-                        <header>
-                            <h3 class="blog__heading">Rust Is The Future of JavaScript Infrastructure.</h3>
-                            <ul class="tags">
-                                <li class="tags__item">Rust</li>
-                                <li class="tags__item">Ifrastructure</li>
-                            </ul>
-                        </header>
-
-                        <p class="blog__summary mt-2">
-                            <time datetime="2022-05-16" class="blog__date">16 May 2022</time> • RA deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their ...
-                        </p>
-                    </article>
-                </a>
-                <!-- END:articles -->
-                <!-- START:articles -->
-                <a href="#">
-                    <article class="blog">
-                        <header>
-                            <h3 class="blog__heading">Rust Is The Future of JavaScript Infrastructure.</h3>
-                            <ul class="tags">
-                                <li class="tags__item">Rust</li>
-                                <li class="tags__item">Ifrastructure</li>
-                            </ul>
-                        </header>
-
-                        <p class="blog__summary mt-2">
-                            <time datetime="2022-05-16" class="blog__date">16 May 2022</time> • RA deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their ...
-                        </p>
-                    </article>
-                </a>
-                <!-- END:articles -->
-                <!-- START:articles -->
-                <a href="#">
-                    <article class="blog">
-                        <header>
-                            <h3 class="blog__heading">Rust Is The Future of JavaScript Infrastructure.</h3>
-                            <ul class="tags">
-                                <li class="tags__item">Rust</li>
-                                <li class="tags__item">Ifrastructure</li>
-                            </ul>
-                        </header>
-
-                        <p class="blog__summary mt-2">
-                            <time datetime="2022-05-16" class="blog__date">16 May 2022</time> • RA deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their ...
-                        </p>
-                    </article>
-                </a>
-                <!-- END:articles -->
+                <div id="blog-contents"></div>
             </div>
         </section>
         <!-- END:section - blogs -->
-
-        <!-- START:section - get in touch -->
-        <section></section>
-        <!-- END:section - get in touch -->
     </main>
     <!-- END:main -->
 
     <!-- START:footer -->
-    <footer></footer>
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div>
+                <p class="footer__copyright">
+                    Design & Build by Edwin Tantawi <br>
+                    copyright © <span id="copyright-years">2021 - 2022</span>
+                </p>
+            </div>
+
+            <div class="footer__navigation">
+                <ul class="footer-nav">
+                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Home</a></li>
+                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Projects</a></li>
+                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Blogs</a></li>
+                </ul>
+                <ul class="footer-nav">
+                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Gears</a></li>
+                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Snippets</a></li>
+                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <!-- END:footer -->
 
     <script src="assets/scripts/navbar.js"></script>
+    <script src="assets/scripts/contents.js"></script>
 </body>
 </html>

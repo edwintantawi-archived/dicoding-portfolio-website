@@ -3,15 +3,12 @@
 *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
-
-    font-family: 'Inter', sans-serif;
-
-    line-height: 1.5;
-    color: var(--dark-blue);
 }
 
-body{
-    height: 99999px;
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--dark-blue);
 }
 
 ul, ol {
