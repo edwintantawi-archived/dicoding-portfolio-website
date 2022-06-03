@@ -6,6 +6,10 @@
     <meta name="description" content="Hi there, im Edwin Tantawi. I Build something that can be felt and have creativity and great FrontEnd Applications.">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/styles/variabels.css">
     <link rel="stylesheet" href="assets/styles/resets.css">
     <link rel="stylesheet" href="assets/styles/utilities.css">
@@ -34,7 +38,7 @@
                     </li>
                 </ul>
 
-                <button id="navbar-toggler" class="navbar__toggler">
+                <button id="navbar-toggler" class="navbar__toggler" aria-label="menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -66,7 +70,10 @@
         <aside>
             <div class="container">
                 <div class="about card">
-                    <img src="assets/images/profile-picture.png" alt="Profile picture" class="about__picture">
+                    <picture class="about__picture">
+                        <source srcset="assets/images/profile-picture.webp" type="image/webp">
+                        <img src="assets/images/profile-picture.png" alt="Profile picture">
+                    </picture>
                     <ul class="bio">
                         <li class="card bio__item">
                             <img src="assets/images/profile.svg" alt="" class="bio__icon">
