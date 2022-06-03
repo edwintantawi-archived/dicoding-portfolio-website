@@ -18,29 +18,27 @@
     <!-- START:header -->
     <header class="header">
         <!-- START:navbar -->
-        <nav class="navbar">
-            <div class="container flex-row items-stretch">
+        <nav id="navbar" class="navbar">
+            <div class="container flex-row items-stretch justify-content-between">
                 <img src="assets/images/brand-logo.svg" alt="" class="navbar__brand">
-                <hr class="navbar__divider v-divider"/>
+
                 <ul id="navbar-nav" class="navbar__nav">
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link navbar__link--active">Home</a>
+                        <a href="#" class="navbar__link">Home</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link">Projects</a>
+                        <a href="#projects" class="navbar__link">Projects</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link">Blogs</a>
+                        <a href="#blogs" class="navbar__link">Blogs</a>
                     </li>
                 </ul>
 
-                <div class="navbar__actions">
-                    <button id="navbar-toggler" class="navbar__toggler">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <button id="navbar-toggler" class="navbar__toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
         <!-- END:navbar -->
@@ -55,7 +53,7 @@
                 <p class="hero__subtitle">
                     Build something that can be felt and have creativity and great FrontEnd Applications.
                 </p>
-                <button class="button button--primary mt-2">Get in Touch</button>
+                <a href="mailto:edwintantawi@gmail.com" class="button button--primary mt-2">Get in Touch</a>
             </div>
         </div>
         <!-- END:hero -->
@@ -71,21 +69,21 @@
                     <img src="assets/images/profile-picture.png" alt="Profile picture" class="about__picture">
                     <ul class="bio">
                         <li class="card bio__item">
-                            <img src="assets/images/profile.svg" alt="" class="icon">
+                            <img src="assets/images/profile.svg" alt="" class="bio__icon">
                             <div>
                                 <h2>Full Name</h2>
                                 <p class="text-primary">Edwin Tantawi</p>
                             </div>
                         </li>
                         <li class="card bio__item">
-                            <img src="assets/images/map.svg" alt="" class="icon">
+                            <img src="assets/images/map.svg" alt="" class="bio__icon">
                             <div>
                                 <h2>Location</h2>
                                 <p class="text-primary">Medan, Indonesia</p>
                             </div>
                         </li>
                         <li class="card bio__item">
-                            <img src="assets/images/star.svg" alt="" class="icon">
+                            <img src="assets/images/star.svg" alt="" class="bio__icon">
                             <div>
                                 <h2>Hobby</h2>
                                 <p class="text-primary">Build something with tech</p>
@@ -98,7 +96,7 @@
         <!-- END:aside -->
 
         <!-- START:section - projects -->
-        <section class="section">
+        <section id="projects" class="section">
             <div class="container">
                 <header class="section__header">
                     <h2 class="section__title">Some <span class="text-primary">things I’ve Build</span></h2>
@@ -111,7 +109,7 @@
         <!-- END:section - projects -->
 
         <!-- START:section - blogs -->
-        <section class="section">
+        <section id="blogs" class="section">
             <div class="container">
                 <header class="section__header">
                     <h2 class="section__title">My <span class="text-primary">Blog post’s</span></h2>
@@ -121,6 +119,20 @@
             </div>
         </section>
         <!-- END:section - blogs -->
+
+        <!-- START:action -->
+        <section class="section">
+            <div class="container">
+                <div class="card action">
+                    <header>
+                        <h2 class="action__title">GET IN TOUCH</h2>
+                        <p class="action__subtitle">Feel free to say hi and make friends with me even discussion</p>
+                    </header>
+                    <a href="mailto:edwintantawi@gmail.com" class="button button--primary mt-2">Say Hello..</a>
+                </div>
+            </div>
+        </section>
+        <!-- END:action -->
     </main>
     <!-- END:main -->
 

@@ -2,6 +2,8 @@
 .button {
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
     height: 48px;
     padding: 0 38px;
     font-size: 0.8rem;
@@ -90,19 +92,15 @@
     font-weight: var(--fw-bold);
 }
 
-.navbar__actions {
-    margin-left: auto;
-}
-
 .navbar__toggler {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: var(--sz-2);
-    height: 100%;
     background-color: transparent;
     border: none;
+
 }
 
 .navbar__toggler > span {
@@ -139,9 +137,14 @@
     .navbar__toggler{
         display: none;
     }
+
 }
 
 @media screen and (max-width: 520px ){
+    .navbar--open {
+        background-color: var(--white);
+    }
+
     .navbar__nav--open {
         position: fixed;
         height: calc(100vh - 60px);
@@ -255,7 +258,7 @@
     font-weight: var(--fw-regular);
 }
 
-.bio__item > .icon {
+.bio__icon {
     width: var(--sz-8);
     height: var(--sz-8);
     padding: var(--sz-1);
@@ -280,7 +283,7 @@
         font-size: var(--sz-4);
     }
 
-    .bio__item > .icon {
+    .bio__icon {
         width: 48px;
         height: 48px;
         padding: var(--sz-2);
@@ -303,7 +306,7 @@
 
 /* START:section */
 .section {
-    margin-top: 64px;
+    padding-top: 64px;
 }
 
 .section__header {
@@ -373,7 +376,6 @@
 }
 
 @media screen and (min-width: 520px){
-
     .project {
         gap: var(--sz-4);
         padding: var(--sz-3);
@@ -471,6 +473,44 @@
 }
 /* END:blog-article */
 
+/* START:action */
+.action {
+    padding: var(--sz-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sz-6);
+
+    text-align: center;
+    border-radius: var(--sz-4);
+}
+
+.action__title {
+    color: var(--primary);
+    font-weight: var(--fw-black);
+    font-size: var(--sz-6);
+    letter-spacing: 1px;
+}
+
+.action__subtitle {
+    max-width: 340px;
+    color: var(--light-gray);
+    font-size: var(--sz-3-5);
+
+}
+
+@media screen and (min-width: 640px){
+    .action__title {
+        font-size: var(--sz-8);
+    }
+
+
+    .action__subtitle {
+        font-size: var(--sz-4);
+    }
+}
+/* END:action */
+
 /* START:fooer */
 .footer > .container {
     padding-top: var(--sz-8);
@@ -513,5 +553,4 @@
         grid-template-columns: 1fr 1fr;
     }
 }
-
 /* END:footer */
