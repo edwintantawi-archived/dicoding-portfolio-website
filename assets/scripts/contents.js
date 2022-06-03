@@ -1,18 +1,21 @@
 const projects = [
     {
         title: 'Todonesia',
+        image: 'assets/images/projects/todonesia-logo.svg',
         category : 'TodoList',
         tags: ['React JS', 'Firebase'],
         url: 'https://github.com/edwintantawi/projects__todonesia'
     },
     {
         title: 'AirBnB Clone',
+        image: 'assets/images/projects/airbnb-logo.svg',
         category : 'Clone App',
         tags: ['Next JS', 'Tailwindcss'],
         url: 'https://github.com/edwintantawi/clone-app__airbnb'
     },
     {
         title: 'DevNote',
+        image: 'assets/images/projects/devnote-logo.svg',
         category : 'Note App',
         tags: ['Dart', 'Flutter'],
         url: 'https://github.com/edwintantawi/devnote_app'
@@ -44,12 +47,12 @@ const blogs = [
 ];
 
 function createProjectTemplate(project){
-    const {title, category, tags, url} = project;
+    const { title, category, tags, url, image } = project;
 
     return `
         <a href="${url}">
             <article class="card project">
-                <img src="assets/images/brand-logo.svg" alt="" class="project__image">
+                <img src="${image}" alt="${title} logo" class="project__image">
                 <header>
                     <h3 class="project__heading">${title} <span class="project__category">(${category})</span></h3>
                     <ul class="tags">
@@ -64,7 +67,7 @@ function createProjectTemplate(project){
 }
 
 function createBlogTemplate(blog) {
-    const {title, tags, summary, url, date} = blog;
+    const { title, tags, summary, url, date } = blog;
 
     return `
         <a href="${url}">
