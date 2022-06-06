@@ -253,7 +253,6 @@
     align-items: center;
     gap: var(--sz-4);
 
-    /*border: 1px solid var(--soft-gray);*/
     padding: var(--sz-2);
     border-radius: var(--sz-2);
 }
