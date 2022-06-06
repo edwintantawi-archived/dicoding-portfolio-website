@@ -2,21 +2,21 @@ const projects = [
     {
         title: 'Todonesia',
         image: 'assets/images/projects/todonesia-logo.svg',
-        category : 'TodoList',
+        category: 'TodoList',
         tags: ['React JS', 'Firebase'],
         url: 'https://github.com/edwintantawi/projects__todonesia'
     },
     {
         title: 'AirBnB Clone',
         image: 'assets/images/projects/airbnb-logo.svg',
-        category : 'Clone App',
+        category: 'Clone App',
         tags: ['Next JS', 'Tailwindcss'],
         url: 'https://github.com/edwintantawi/clone-app__airbnb'
     },
     {
         title: 'DevNote',
         image: 'assets/images/projects/devnote-logo.svg',
-        category : 'Note App',
+        category: 'Note App',
         tags: ['Dart', 'Flutter'],
         url: 'https://github.com/edwintantawi/devnote_app'
     },
@@ -32,7 +32,7 @@ const blogs = [
     },
     {
         title: 'Yang tidak kamu ketahui tentang javascript, serta bedah increment operator',
-        tags: ['Conquer Javascript','Javascript'],
+        tags: ['Conquer Javascript', 'Javascript'],
         summary: 'Mengulik beberapa hal yang mungkin saja kita tidak ketahui di javascript, serta membeda salah satu operator yaitu incement operator',
         url: 'https://edwintantawi.medium.com/conquer-javascript-1-berteman-dengan-javascript-cb226192eabf',
         date: '2021-10-11',
@@ -46,8 +46,14 @@ const blogs = [
     },
 ];
 
-function createProjectTemplate(project){
-    const { title, category, tags, url, image } = project;
+function createTagsTemplate(tags) {
+    return tags.map((tag) => {
+        return `<li class="tags__item">${tag}</li>`
+    }).join('')
+}
+
+function createProjectTemplate(project) {
+    const {title, category, tags, url, image} = project;
 
     return `
         <a href="${url}">
@@ -56,9 +62,7 @@ function createProjectTemplate(project){
                 <header>
                     <h3 class="project__heading">${title} <span class="project__category">(${category})</span></h3>
                     <ul class="tags">
-                        ${tags.map((tag) => {
-                            return `<li class="tags__item">${tag}</li>`    
-                        }).join('')}                        
+                        ${createTagsTemplate(tags)}                      
                     </ul>
                 </header>
             </article>
@@ -67,7 +71,7 @@ function createProjectTemplate(project){
 }
 
 function createBlogTemplate(blog) {
-    const { title, tags, summary, url, date } = blog;
+    const {title, tags, summary, url, date} = blog;
 
     return `
         <a href="${url}">
@@ -75,9 +79,7 @@ function createBlogTemplate(blog) {
                 <header>
                     <h3 class="blog__heading">${title}</h3>
                     <ul class="tags">
-                        ${tags.map((tag) => {
-                            return `<li class="tags__item">${tag}</li>`
-                        }).join('')}
+                        ${createTagsTemplate(tags)}
                     </ul>
                 </header>
 
@@ -93,7 +95,7 @@ function getYearsRangeFrom(yearFrom) {
     const currentYear = new Date().getFullYear();
     const isSameYear = currentYear === yearFrom;
 
-    if(isSameYear) return yearFrom;
+    if (isSameYear) return yearFrom;
 
     return `${yearFrom} - ${currentYear}`
 }
@@ -104,4 +106,4 @@ const copyrightYearsContent = document.getElementById('copyright-years');
 
 projects.forEach((project) => projectContent.innerHTML += createProjectTemplate(project));
 blogs.forEach((blog) => blogContent.innerHTML += createBlogTemplate(blog));
-copyrightYearsContent.innerText = getYearsRangeFrom(2021)
+copyrightYearsContent.innerText = getYearsRangeFrom(2022)
